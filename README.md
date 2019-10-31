@@ -22,6 +22,22 @@ Testing Data Score: 0.8462946020128088
 
 The same model scaled with StandardScaler showed a Training Data Score at 89.17% while its testing data derived an 88.92%. But for the small difference between both scores, the model would be under or over fitted. 
 
+StandardScaler()
+                precision    recall  f1-score   support
+
+     CANDIDATE       0.29      0.02      0.04       529
+     CONFIRMED       0.00      0.00      0.00       568
+FALSE POSITIVE       0.49      0.98      0.66      1089
+
+     micro avg       0.49      0.49      0.49      2186
+     macro avg       0.26      0.33      0.23      2186
+  weighted avg       0.32      0.49      0.34      2186
+
+Training Data Score: 0.8917352851479109
+Testing Data Score: 0.889295516925892
+
+Second, the ‘C’:10 and ‘gamma’:0.0001 GridSearchCV reached a model score just over 87% compared to its testing score at 86.96%. Hardly ever does not GrisSearchCV reach an optimal point but also it never misleads the sweet point far away from its best calculated parameters. 
+
 GridSearchCV()
                 precision    recall  f1-score   support
 
@@ -36,22 +52,6 @@ FALSE POSITIVE       0.50      0.74      0.60      1089
 Testing Data Score : 0.8696248856358646
 Training Data Score: Best Parameters {'C': 10, 'gamma': 0.0001}
 Training Data Score: Best Score  0.8720646538578835
-
-Second, the ‘C’:10 and ‘gamma’:0.0001 GridSearchCV reached a model score just over 87% compared to its testing score at 86.96%. Hardly ever does not GrisSearchCV reach an optimal point but also it never misleads the sweet point far away from its best calculated parameters. 
-
-StandardScaler()
-                precision    recall  f1-score   support
-
-     CANDIDATE       0.29      0.02      0.04       529
-     CONFIRMED       0.00      0.00      0.00       568
-FALSE POSITIVE       0.49      0.98      0.66      1089
-
-     micro avg       0.49      0.49      0.49      2186
-     macro avg       0.26      0.33      0.23      2186
-  weighted avg       0.32      0.49      0.34      2186
-
-Training Data Score: 0.8917352851479109
-Testing Data Score: 0.889295516925892
 
 Given narrow distances between training and testing scores, the best of the previous models will be the one with the highest accuracy such as the SVC standard scaler. It is worth to mention that GrisSearchCV estimated a better score than the SVC with MinMax scaler. 
 Any assumptions you can make based on your model
