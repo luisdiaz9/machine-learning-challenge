@@ -1,6 +1,6 @@
 ## Machine Learning
 ### Summary
-This repository contains a code whith three models that were developed to determine a False Positive, a candidate or an actual hidden planet outside our solar system. <br>
+This repository contains a code with three models that were developed to determine a False Positive, a candidate or an actual hidden planet outside our solar system. <br>
 ### Technical Details
 In order to run the code, it is required Visual Studio or Jupyter Notebook.<br>
 ### Screenshots
